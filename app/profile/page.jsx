@@ -11,7 +11,6 @@ export default function Profile() {
 
         <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-          sunt dolores deleniti inventore quaerat mollitia?
         </p>
 
         <div className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
