@@ -1,21 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import QRCode from "qrcode.react";
-import { FiCamera } from "react-icons/fi";
+
 import { Html5QrcodeScanner } from "html5-qrcode";
+import { QRCodeGenerator } from "@/components/QRCodeGenerator";
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState("");
   const [scanMode, setScanMode] = useState(false);
   const [scanResult, setScanResult] = useState(null);
-
-  const toggleScanMode = () => {
-    setScanMode(!scanMode);
-  };
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
 
   useEffect(() => {
     const scanner = new Html5QrcodeScanner("reader", {
@@ -40,13 +31,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <input
-          type="number"
-          onChange={handleChange}
-          className="text-black border-black"
-          placeholder="Enter your number here"
-        />
-        <QRCode value={inputValue} />
+        <QRCodeGenerator />
         {scanResult ? (
           <div>
             Success: <a href={"http://" + scanResult}>{scanResult}</a>{" "}
