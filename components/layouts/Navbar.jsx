@@ -1,6 +1,7 @@
 import React from "react";
 import { PiQrCodeLight } from "react-icons/pi";
 import { AiOutlineScan } from "react-icons/ai";
+import { BiHomeAlt2 } from "react-icons/bi";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -11,6 +12,13 @@ export const Navbar = () => {
           <div className="flex flex-1 items-center justify-between gap-8 sm:justify-end">
             <div className="flex gap-4">
               <Link
+                href="/"
+                className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
+              >
+                <span className="sr-only">Home</span>
+                <BiHomeAlt2 className="h-5 w-5" />
+              </Link>
+              <Link
                 href="/profile"
                 className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
               >
@@ -18,13 +26,13 @@ export const Navbar = () => {
                 <PiQrCodeLight className="h-5 w-5" />
               </Link>
 
-              <a
-                href="#"
+              <Link
+                href="/reader"
                 className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
               >
                 <span className="sr-only">Scan QR </span>
                 <AiOutlineScan className="h-5 w-5" />
-              </a>
+              </Link>
             </div>
 
             <button
