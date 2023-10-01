@@ -74,7 +74,7 @@ export const Navbar = () => {
           </h1>
 
           <p className="mt-1.5 text-sm text-gray-500">
-            Let's star calling people 📞
+            Let&apos;s star calling people 📞
           </p>
         </div>
       </div>
