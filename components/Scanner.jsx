@@ -1,35 +1,39 @@
-import { useState } from "react";
-import dynamic from "next/dynamic";
+"use client";
+import React from "react";
+import { useState, useEffect } from "react";
+import { Html5QrcodeScanner } from "html5-qrcode";
 
-const QrReader = dynamic(
-  () => import("react-qr-reader").then((mod) => mod.default),
-  { ssr: false }
-);
+export const Scanner = () => {
+  const [scanResult, setScanResult] = useState(null);
 
-function Scanner() {
-  const [result, setResult] = useState("No result");
+  useEffect(() => {
+    const scanner = new Html5QrcodeScanner("reader", {
+      qrbox: {
+        width: 250,
+        height: 250,
+      },
+      fps: 5,
+    });
+    scanner.render(success, error);
 
-  const handleScan = (data) => {
-    if (data) {
-      setResult(data);
+    function success(result) {
+      scanner.clear();
+      setScanResult(result);
     }
-  };
 
-  const handleError = (err) => {
-    console.error(err);
-  };
-
+    function error(err) {
+      console.log(err);
+    }
+  }, []);
   return (
     <div>
-      <QrReader
-        delay={300}
-        onError={handleError}
-        onScan={handleScan}
-        style={{ width: "100%" }}
-      />
-      <p>{result}</p>
+      {scanResult ? (
+        <div>
+          Success: <a href={"http://" + scanResult}>{scanResult}</a>{" "}
+        </div>
+      ) : (
+        <div id="reader"></div>
+      )}
     </div>
   );
-}
-
-export default Scanner;
+};
