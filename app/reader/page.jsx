@@ -1,5 +1,11 @@
+import CallButton from "@/components/CallButton";
 import { Scanner } from "@/components/Scanner";
 
 export default function Reader() {
-  return <Scanner />;
+  return (
+    <div>
+      <Scanner />
+      <CallButton />
+    </div>
+  );
 }
