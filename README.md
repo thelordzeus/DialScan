@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/thelordzeus/DialScan/image?font=Rokkitt&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Plus&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
-<p id="description">A Simple Voice caller based on WebRTC which enables users to make call using their contact QR code</p>
+<p id="description">A Simple Voice caller based on WebRTC which enables users to make calls using their contact QR code</p>
 
 <h2>🚀 Demo</h2>
 
@@ -16,7 +16,12 @@
 
 <img src="https://github.com/thelordzeus/DialScan/assets/87523233/5f122a13-7c60-43b0-ad06-d2ad6f08db88" alt="project-screenshot" width="300" height="500/">
 
-  
+<h2>📹 Video Demo</h2>
+
+
+https://github.com/thelordzeus/DialScan/assets/87523233/bf3361d1-9fe9-4306-97f7-755ddfb790d8
+
+
   
 <h2>🧐 Features</h2>
 
